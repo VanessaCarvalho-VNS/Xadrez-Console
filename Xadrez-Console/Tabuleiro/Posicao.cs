@@ -8,6 +8,12 @@
             this.linha = linha;
             this.coluna = coluna;
         }
+         
+        public void definirValores(int linha, int coluna) { 
+
+        
+
+        }
 
         public override string ToString() {
             return linha
