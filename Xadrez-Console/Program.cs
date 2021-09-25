@@ -14,7 +14,6 @@ namespace Xadrez_Console {
                 while (!partida.terminada) {
 
                     try { 
-                    
                         Console.Clear();
                         Tela.imprimirPartida(partida);
 
@@ -42,6 +41,8 @@ namespace Xadrez_Console {
                     }
 
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
 
             }
             catch (TabuleiroException e) { 
