@@ -4,15 +4,19 @@ using tabuleiro;
 using xadrez;
 
 namespace Xadrez_Console {
-    class Tela { 
+    class Tela {
 
-        public static void imprimirPartida(PartidaDeXadrez partida) {
+        public static void imprimirPartida(PartidaDeXadrez partida)
+        {
             imprimirTabuleiro(partida.tab);
             Console.WriteLine();
             imprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.jogadorAtual);
             Console.WriteLine("Aguardado jogada: " + partida.jogadorAtual);
+            if (partida.xeque) {
+                Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida) {
@@ -92,15 +96,12 @@ namespace Xadrez_Console {
         }
 
         public static void imprimirPeca(Peca peca) {
-
             if (peca == null) { 
                 Console.Write("- ");
-
             }
             else { 
                 if (peca.cor == Cor.Branca) { 
                     Console.Write(peca);
-
                 }
                 else { 
                     ConsoleColor aux = Console.ForegroundColor;

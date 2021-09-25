@@ -11,11 +11,14 @@
             this.tab = tab;
             this.cor = cor;
             this.qteMovimentos = 0;
-        
         }
 
         public void incrementarQteMovimentos() {
             qteMovimentos++;
+        }
+
+        public void decrementarQteMovimentos() { 
+            qteMovimentos--;
         }
 
         public bool existeMovimentosPossiveis() {
@@ -24,18 +27,10 @@
                 for (int j=0; j<tab.colunas; j++) { 
                     if (mat[i, j]) {
                         return true;
-                    
-
                     }
-                
-
                 }
-            
-
             }
             return false;
-        
-
         }
 
         public bool podeMoverPara(Posicao pos) {
